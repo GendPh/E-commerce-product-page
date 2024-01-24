@@ -1,0 +1,27 @@
+/* npx tailwindcss -i ./src/tailwindcss/tailwind.css -o ./src/tailwindcss/tailwindout.css --watch  */
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    width: 20px;
+    aspect-ratio: 1/1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .btn#open-navbar {
+    background-image: url(../../src/assets/svg/icon-menu.svg);
+  }
+  .btn#show-cart {
+    background-image: url(../../src/assets/svg/icon-cart.svg);
+  }
+
+  .wrapper {
+    @apply flex gap-4;
+  }
+}
