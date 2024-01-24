@@ -14,16 +14,16 @@
 <body>
   <header class="p-5 flex items-center justify-between">
     <div class="wrapper">
-      <button id="open-navbar" class="btn"></button>
+      <button id="navbar-open" class="btn"></button>
 
       <figure>
         <img src="./src/assets/svg/logo.svg" alt="icon logo sneakers">
       </figure>
     </div>
 
-    <nav class="hidden">
-      <button type="button" id="navbar-close">x</button>
-      <ul>
+    <nav id="main-navBar" class="">
+      <button type="button" id="navbar-close" class="btn"></button>
+      <ul class="mt-10">
         <li><a href="#">Collections</a></li>
         <li><a href="#">Men</a></li>
         <li><a href="#">Women</a></li>
@@ -36,14 +36,48 @@
     <div class="wrapper">
       <button class="btn" id="show-cart"></button>
 
-      <div id="cart"></div>
+      <div id="cart">
+        <div class="header">
+          <h3>Cart</h3>
+        </div>
+        <div class="body">
+          <div class="wrapper">
+            <img src="./src/assets/product/image-product-1-thumbnail.jpg" alt="thumbnail product">
+            <div>
+              <p class="title">Fall Limited Edition Sneakers</p>
+              <p class="price"><span class="value">125.00€ x 3</span> <span class="total">375.00€</span></p>
+            </div>
+            <button type="button" class="btn remove-cart-item"></button>
+          </div>
+        </div>
+        <div class="footer">
+          <a href="#">Checkout</a>
+        </div>
+      </div>
 
       <figure>
         <img src="./src/assets/avatar/image-avatar.png" alt="avatar picture" class="w-10 rounded-full">
       </figure>
     </div>
   </header>
-  <main></main>
+  <main>
+    <!--
+      #TODO: 
+      [ ] Create library splide
+      
+      <div class="wrapper gap-0 overflow-hidden relative" id="slider">
+      <button type="button" id="prev" class="slide z-10"></button>
+      <button type="button" id="next" class="slide z-10"></button>
+      <img src="./src/assets/product/image-product-1.jpg" alt="product 1 sneakers" class="w-full z-0">
+      <img src="./src/assets/product/image-product-2.jpg" alt="product 2 sneakers" class="w-full z-0">
+      <img src="./src/assets/product/image-product-3.jpg" alt="product 3 sneakers"
+        class="w-full z-0">
+      <img src="./src/assets/product/image-product-4.jpg" alt="product 4 sneakers" class="w-full z-0">
+    </div> -->
+  </main>
+
+
+  <script src="./src/Js/navBar.js"></script>
 </body>
 
 </html>

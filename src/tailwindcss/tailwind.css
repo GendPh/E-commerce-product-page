@@ -5,6 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    @apply font-Kumbh-Sans;
+  }
+}
+
 @layer components {
   .btn {
     width: 20px;
@@ -12,16 +18,83 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    display: block;
   }
 
-  .btn#open-navbar {
+  .btn#navbar-open {
     background-image: url(../../src/assets/svg/icon-menu.svg);
+  }
+  .btn#navbar-close {
+    background-image: url(../../src/assets/svg/icon-close.svg);
   }
   .btn#show-cart {
     background-image: url(../../src/assets/svg/icon-cart.svg);
   }
+  .btn.remove-cart-item {
+    background-image: url(../../src/assets/svg/icon-delete.svg);
+  }
 
   .wrapper {
     @apply flex gap-4;
+  }
+
+  #main-navBar {
+    transform: translateX(-100%);
+    transition: transform 0.5s linear;
+    @apply fixed inset-0 right-[40%] font-bold bg-neutral-White p-5 pr-10 text-paragraph text-neutral-Black;
+  }
+  #main-navBar.open {
+    transform: translateX(0);
+    box-shadow: 0px 0px 0px 500px hsla(0, 0%, 19%, 0.646);
+  }
+
+  #cart {
+    transition: top 500ms linear, opacity 500ms linear;
+    @apply fixed top-[-100%] opacity-0 left-5 right-5 rounded-lg text-neutral-very-dark-blue bg-neutral-White text-paragraph;
+  }
+
+  #cart.open {
+    @apply top-20 opacity-100;
+  }
+
+  #cart .header {
+    @apply p-5 border-b font-bold;
+  }
+
+  #cart .body {
+    @apply p-5 text-neutral-Dark-grayish-blue;
+  }
+  #cart .body img {
+    @apply rounded-lg w-10;
+  }
+  #cart .body .price span.total {
+    @apply font-bold text-neutral-very-dark-blue;
+  }
+  #cart .footer {
+    @apply p-5;
+  }
+  #cart .footer a {
+    @apply bg-primary-orange text-neutral-Light-grayish-blue text-center w-full block p-3 rounded-lg;
+  }
+
+  .slide {
+    width: 35px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 25%;
+    background-repeat: no-repeat;
+    @apply bg-neutral-Light-grayish-blue absolute top-1/2 -translate-y-1/2;
+  }
+  .slide#prev {
+    background-image: url(../../src/assets/svg/icon-previous.svg);
+    @apply left-5;
+  }
+  .slide#next {
+    background-image: url(../../src/assets/svg/icon-next.svg);
+    @apply right-5;
+  }
+  #slider img {
+    transition: all 100ms linear;
   }
 }
