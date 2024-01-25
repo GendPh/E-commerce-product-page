@@ -5,10 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="
-  https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
-  " rel="stylesheet">
   <link rel="stylesheet" href="./src/tailwindcss/tailwindout.css">
+  <link rel="stylesheet" href="./src/css/splide.min.css">
 
   <title>E-commerce product page</title>
 </head>
@@ -23,7 +21,7 @@
       </figure>
     </div>
 
-    <nav id="main-navBar" class="">
+    <nav id="main-navBar" class="z-10">
       <button type="button" id="navbar-close" class="btn"></button>
       <ul class="mt-10">
         <li><a href="#">Collections</a></li>
@@ -38,7 +36,7 @@
     <div class="wrapper">
       <button class="btn" id="show-cart"></button>
 
-      <div id="cart">
+      <div id="cart" class="z-10">
         <div class="header">
           <h3>Cart</h3>
         </div>
@@ -63,7 +61,7 @@
     </div>
   </header>
   <main>
-    <section class="splide" aria-label="Splide Basic HTML Example">
+    <div class="splide" aria-label="Splide Basic HTML Example">
       <div class="splide__track">
         <ul class="splide__list">
           <figure class="splide__slide"><img src="./src/assets/product/image-product-1.jpg" alt="product 1 sneakers">
@@ -76,7 +74,27 @@
           </figure>
         </ul>
       </div>
-    </section>
+    </div>
+    <div class="p-5 font-bold">
+      <h4 class="uppercase text-primary-orange">sneaker company</h4>
+      <h1 class="my-3 capitalize text-neutral-very-dark-blue text-3xl">Fall limited edition sneakers</h1>
+
+      <p class="text-neutral-Grayish-blue font-normal">These low-profile sneakers are your perfect casual wear
+        companion. Featuring a durable rubber outer sole,
+        they'll withstand everything the weather can offer.</p>
+
+      <div class="wrapper text-2xl my-5 justify-between">
+        <p class="wrapper items-center">125.00€ <span
+            class="bg-primary-pale-orange text-lg text-primary-orange px-2 rounded-lg">50%</span></p>
+        <p class="text-neutral-Grayish-blue line-through text-xl">250.00€</p>
+      </div>
+
+      <div class="wrapper justify-between bg-neutral-Grayish-blue bg-opacity-35 p-5 rounded-lg">
+        <button class="btn" id="qty-reduce"></button>
+        <input type="number" name="qty" id="qty-to-add" value="0" min="0" class="text-xl bg-transparent text-center">
+        <button class="btn" id="qty-add"></button>
+      </div>
+    </div>
   </main>
 
   <script src="

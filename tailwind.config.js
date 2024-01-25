@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "primary-orange": "hsl(26, 100%, 55%)",
-        "primary-pale-orange": "hsl(25, 100 %, 94 %)",
+        "primary-pale-orange": "hsl(25, 100%, 94%)",
 
         "neutral-very-dark-blue": "hsl(220, 13%, 13%)",
         "neutral-Dark-grayish-blue": "hsl(219, 9%, 45%)",
