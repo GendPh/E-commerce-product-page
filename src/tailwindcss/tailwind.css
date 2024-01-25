@@ -77,24 +77,7 @@
     @apply bg-primary-orange text-neutral-Light-grayish-blue text-center w-full block p-3 rounded-lg;
   }
 
-  .slide {
-    width: 35px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    background-position: center;
-    background-size: 25%;
-    background-repeat: no-repeat;
-    @apply bg-neutral-Light-grayish-blue absolute top-1/2 -translate-y-1/2;
-  }
-  .slide#prev {
-    background-image: url(../../src/assets/svg/icon-previous.svg);
-    @apply left-5;
-  }
-  .slide#next {
-    background-image: url(../../src/assets/svg/icon-next.svg);
-    @apply right-5;
-  }
-  #slider img {
-    transition: all 100ms linear;
+  #splide img {
+    display: none;
   }
 }
